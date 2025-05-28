@@ -1,7 +1,7 @@
 # Makefile for lab07a test
 
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++14
+CXXFLAGS = -Wall -Wextra -std=c++11
 
 OBJS = lab07atest.o WordCount.o tddFuncs.o
 TARGET = lab07atest

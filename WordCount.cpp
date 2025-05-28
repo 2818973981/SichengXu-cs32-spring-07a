@@ -146,11 +146,11 @@ void WordCount::dumpWordsSortedByOccurence(std::ostream &out) const {
     }
 
 	std::sort(allWords.begin(), allWords.end(),
-    [](const auto& a, const auto& b) {
+    [](const std::pair<std::string, int>& a,
+       const std::pair<std::string, int>& b) {
         if (a.second != b.second)
             return a.second < b.second;  
-        else
-            return a.first < b.first;    
+        return a.first < b.first;       
     });
 
 	for (const auto& p : allWords) {
